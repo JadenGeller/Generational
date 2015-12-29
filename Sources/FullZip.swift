@@ -1,5 +1,5 @@
 //
-//  Zip.swift
+//  FullZip.swift
 //  Generational
 //
 //  Created by Jaden Geller on 12/28/15.

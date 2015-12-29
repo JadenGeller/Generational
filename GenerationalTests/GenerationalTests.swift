@@ -59,4 +59,22 @@ class GenerationalTests: XCTestCase {
             XCTAssertEqual(i <= 3 ? i : 9, l)
         }
     }
+    
+    func testDrop() {
+        var expected = 5
+        for x in (1...10).dropWhile({ $0 < 5 }) {
+            XCTAssertEqual(expected, x)
+            expected += 1
+        }
+        XCTAssertEqual(expected, 11)
+    }
+    
+    func testTake() {
+        var expected = 1
+        for x in (1...10).takeWhile({ $0 < 5 }) {
+            XCTAssertEqual(expected, x)
+            expected += 1
+        }
+        XCTAssertEqual(expected, 5)
+    }
 }
