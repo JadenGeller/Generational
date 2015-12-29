@@ -45,3 +45,10 @@ for x in (1...10).takeWhile({ $0 <= 3 || $0 => 7 }) {
   print(x) // -> 1 -> 2 -> 3
 }
 ```
+
+## Iterating
+```swift
+for x in iterate(initialValue: 1, transform: { $0 * 2 }) {
+  print(x) // -> 1 -> 2 -> 4 -> 8 -> 16 -> 32 -> 64 -> 128 -> 256 -> ...
+}
+```
