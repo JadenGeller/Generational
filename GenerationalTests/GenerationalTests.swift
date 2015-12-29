@@ -77,4 +77,13 @@ class GenerationalTests: XCTestCase {
         }
         XCTAssertEqual(expected, 5)
     }
+    
+    func testIterate() {
+        var z = 1
+        for x in iterate(initialValue: 1, transform: { $0 * 2 }).prefix(5) {
+            XCTAssertEqual(z, x)
+            z *= 2
+        }
+        XCTAssertEqual(32, z)
+    }
 }

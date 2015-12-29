@@ -11,8 +11,9 @@
 		4D6F6B311C32251400634E22 /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B291C3224EF00634E22 /* Cycle.swift */; };
 		4D6F6B321C32251400634E22 /* RepeatedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B2A1C3224EF00634E22 /* RepeatedValue.swift */; };
 		4D6F6B331C32251400634E22 /* FullZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B2B1C3224EF00634E22 /* FullZip.swift */; };
-		4D6F6B3A1C3255DA00634E22 /* LazyDropSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B381C3255DA00634E22 /* LazyDropSequence.swift */; };
-		4D6F6B3B1C3255DA00634E22 /* LazyTakeSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B391C3255DA00634E22 /* LazyTakeSequence.swift */; };
+		4D6F6B3A1C3255DA00634E22 /* LazyDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B381C3255DA00634E22 /* LazyDrop.swift */; };
+		4D6F6B3B1C3255DA00634E22 /* LazyTake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B391C3255DA00634E22 /* LazyTake.swift */; };
+		4D6F6B3D1C32573D00634E22 /* Iterate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B3C1C32573D00634E22 /* Iterate.swift */; };
 		4DE27EED1C32179500BFD11A /* Generational.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE27EE21C32179500BFD11A /* Generational.framework */; };
 		4DE27EF21C32179500BFD11A /* GenerationalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE27EF11C32179500BFD11A /* GenerationalTests.swift */; };
 /* End PBXBuildFile section */
@@ -32,8 +33,9 @@
 		4D6F6B291C3224EF00634E22 /* Cycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cycle.swift; path = ../Sources/Cycle.swift; sourceTree = "<group>"; };
 		4D6F6B2A1C3224EF00634E22 /* RepeatedValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepeatedValue.swift; path = ../Sources/RepeatedValue.swift; sourceTree = "<group>"; };
 		4D6F6B2B1C3224EF00634E22 /* FullZip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FullZip.swift; path = ../Sources/FullZip.swift; sourceTree = "<group>"; };
-		4D6F6B381C3255DA00634E22 /* LazyDropSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LazyDropSequence.swift; path = Sources/LazyDropSequence.swift; sourceTree = SOURCE_ROOT; };
-		4D6F6B391C3255DA00634E22 /* LazyTakeSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LazyTakeSequence.swift; path = Sources/LazyTakeSequence.swift; sourceTree = SOURCE_ROOT; };
+		4D6F6B381C3255DA00634E22 /* LazyDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LazyDrop.swift; path = Sources/LazyDrop.swift; sourceTree = SOURCE_ROOT; };
+		4D6F6B391C3255DA00634E22 /* LazyTake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LazyTake.swift; path = Sources/LazyTake.swift; sourceTree = SOURCE_ROOT; };
+		4D6F6B3C1C32573D00634E22 /* Iterate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Iterate.swift; path = ../Sources/Iterate.swift; sourceTree = "<group>"; };
 		4DE27EE21C32179500BFD11A /* Generational.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Generational.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE27EE71C32179500BFD11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE27EEC1C32179500BFD11A /* GenerationalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenerationalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,8 +88,9 @@
 				4D6F6B291C3224EF00634E22 /* Cycle.swift */,
 				4D6F6B2A1C3224EF00634E22 /* RepeatedValue.swift */,
 				4D6F6B2B1C3224EF00634E22 /* FullZip.swift */,
-				4D6F6B381C3255DA00634E22 /* LazyDropSequence.swift */,
-				4D6F6B391C3255DA00634E22 /* LazyTakeSequence.swift */,
+				4D6F6B381C3255DA00634E22 /* LazyDrop.swift */,
+				4D6F6B391C3255DA00634E22 /* LazyTake.swift */,
+				4D6F6B3C1C32573D00634E22 /* Iterate.swift */,
 			);
 			path = Generational;
 			sourceTree = "<group>";
@@ -209,11 +212,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D6F6B321C32251400634E22 /* RepeatedValue.swift in Sources */,
-				4D6F6B3A1C3255DA00634E22 /* LazyDropSequence.swift in Sources */,
+				4D6F6B3A1C3255DA00634E22 /* LazyDrop.swift in Sources */,
 				4D6F6B311C32251400634E22 /* Cycle.swift in Sources */,
 				4D6F6B301C32251400634E22 /* Concatenate.swift in Sources */,
 				4D6F6B331C32251400634E22 /* FullZip.swift in Sources */,
-				4D6F6B3B1C3255DA00634E22 /* LazyTakeSequence.swift in Sources */,
+				4D6F6B3B1C3255DA00634E22 /* LazyTake.swift in Sources */,
+				4D6F6B3D1C32573D00634E22 /* Iterate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
