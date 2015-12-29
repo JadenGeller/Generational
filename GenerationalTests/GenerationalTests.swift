@@ -47,9 +47,16 @@ class GenerationalTests: XCTestCase {
     }
     
     func testFullZip() {
-        for (i, (l, r)) in zip(0...10, 0...3, extendingWithDefaultValues: (9, 9)).enumerate() {
+        for (i, (l, r)) in fullZip(0...10, 0...3).enumerate() {
             XCTAssertEqual(i, l)
-            XCTAssertEqual(i <= 3 ? i : 9, r)
+            XCTAssertEqual(i <= 3 ? i : nil, r)
+        }
+    }
+    
+    func testFullZipDefaultValues() {
+        for (i, (l, r)) in fullZip(0...3, 0...10, defaultValues: (9, 9)).enumerate() {
+            XCTAssertEqual(i, r)
+            XCTAssertEqual(i <= 3 ? i : 9, l)
         }
     }
 }
