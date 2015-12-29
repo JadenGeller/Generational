@@ -23,7 +23,11 @@ for x in [1, 2, 3].extend(byRepeatingValue: 0) {
 
 ## Full Zipping
 ```swift
-for x in zip([1, 2, 3], [5, 6], extendingWithDefaultValues: (0, 0)) {
-  print(x) // -> (1, 5) -> (2, 6) -> (3, 0)
+for x in fullZip([1, 2, 3], [5, 6]) {
+  print(x) // -> (1, 5) -> (2, 6) -> (3, nil)
+}
+
+for x in fullZip([1, 2, 3], [5, 6], defaultValues: (9, 9)) {
+  print(x) // -> (1, 5) -> (2, 6) -> (3, 9)
 }
 ```
