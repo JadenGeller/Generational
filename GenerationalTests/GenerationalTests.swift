@@ -62,7 +62,7 @@ class GenerationalTests: XCTestCase {
     
     func testDrop() {
         var expected = 5
-        for x in (1...10).dropWhile({ $0 < 5 }) {
+        for x in (1...10).dropWhile({ $0 < 5 || $0 > 8 }) {
             XCTAssertEqual(expected, x)
             expected += 1
         }
@@ -71,7 +71,7 @@ class GenerationalTests: XCTestCase {
     
     func testTake() {
         var expected = 1
-        for x in (1...10).takeWhile({ $0 < 5 }) {
+        for x in (1...10).takeWhile({ $0 < 5 || $0 > 8 }) {
             XCTAssertEqual(expected, x)
             expected += 1
         }
