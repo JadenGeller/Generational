@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4DE27EE61C32179500BFD11A /* Generational.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DE27EE51C32179500BFD11A /* Generational.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D6F6B1F1C3217CD00634E22 /* Concatenate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B1E1C3217CD00634E22 /* Concatenate.swift */; };
+		4D6F6B211C321AD800634E22 /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B201C321AD800634E22 /* Cycle.swift */; };
+		4D6F6B231C321E6900634E22 /* RepeatedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B221C321E6900634E22 /* RepeatedValue.swift */; };
+		4D6F6B271C32206500634E22 /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B261C32206500634E22 /* Zip.swift */; };
 		4DE27EED1C32179500BFD11A /* Generational.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE27EE21C32179500BFD11A /* Generational.framework */; };
 		4DE27EF21C32179500BFD11A /* GenerationalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE27EF11C32179500BFD11A /* GenerationalTests.swift */; };
 /* End PBXBuildFile section */
@@ -23,8 +26,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D6F6B1E1C3217CD00634E22 /* Concatenate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concatenate.swift; sourceTree = "<group>"; };
+		4D6F6B201C321AD800634E22 /* Cycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cycle.swift; sourceTree = "<group>"; };
+		4D6F6B221C321E6900634E22 /* RepeatedValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatedValue.swift; sourceTree = "<group>"; };
+		4D6F6B261C32206500634E22 /* Zip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zip.swift; sourceTree = "<group>"; };
 		4DE27EE21C32179500BFD11A /* Generational.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Generational.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DE27EE51C32179500BFD11A /* Generational.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Generational.h; sourceTree = "<group>"; };
 		4DE27EE71C32179500BFD11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE27EEC1C32179500BFD11A /* GenerationalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenerationalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE27EF11C32179500BFD11A /* GenerationalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationalTests.swift; sourceTree = "<group>"; };
@@ -53,6 +59,10 @@
 		4DE27ED81C32179500BFD11A = {
 			isa = PBXGroup;
 			children = (
+				4D6F6B1E1C3217CD00634E22 /* Concatenate.swift */,
+				4D6F6B221C321E6900634E22 /* RepeatedValue.swift */,
+				4D6F6B201C321AD800634E22 /* Cycle.swift */,
+				4D6F6B261C32206500634E22 /* Zip.swift */,
 				4DE27EE41C32179500BFD11A /* Generational */,
 				4DE27EF01C32179500BFD11A /* GenerationalTests */,
 				4DE27EE31C32179500BFD11A /* Products */,
@@ -71,7 +81,6 @@
 		4DE27EE41C32179500BFD11A /* Generational */ = {
 			isa = PBXGroup;
 			children = (
-				4DE27EE51C32179500BFD11A /* Generational.h */,
 				4DE27EE71C32179500BFD11A /* Info.plist */,
 			);
 			path = Generational;
@@ -93,7 +102,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DE27EE61C32179500BFD11A /* Generational.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +202,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6F6B231C321E6900634E22 /* RepeatedValue.swift in Sources */,
+				4D6F6B211C321AD800634E22 /* Cycle.swift in Sources */,
+				4D6F6B1F1C3217CD00634E22 /* Concatenate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DE27EF21C32179500BFD11A /* GenerationalTests.swift in Sources */,
+				4D6F6B271C32206500634E22 /* Zip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +317,7 @@
 		4DE27EF71C32179500BFD11A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -317,12 +330,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.JadenGeller.Generational;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		4DE27EF81C32179500BFD11A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -379,6 +394,7 @@
 				4DE27EF81C32179500BFD11A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DE27EF91C32179500BFD11A /* Build configuration list for PBXNativeTarget "GenerationalTests" */ = {
 			isa = XCConfigurationList;
@@ -387,6 +403,7 @@
 				4DE27EFB1C32179500BFD11A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
