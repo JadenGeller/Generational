@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D4444081C33BD9E00D84F27 /* PairwiseComparing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4444071C33BD9E00D84F27 /* PairwiseComparing.swift */; };
 		4D44440A1C33C26F00D84F27 /* Partitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4444091C33C26F00D84F27 /* Partitioning.swift */; };
+		4D44440D1C33C68E00D84F27 /* Unwrapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44440B1C33C68500D84F27 /* Unwrapping.swift */; };
 		4D6F6B301C32251400634E22 /* Concatenate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B281C3224EF00634E22 /* Concatenate.swift */; };
 		4D6F6B311C32251400634E22 /* Cycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B291C3224EF00634E22 /* Cycle.swift */; };
 		4D6F6B321C32251400634E22 /* RepeatedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B2A1C3224EF00634E22 /* RepeatedValue.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		4D4444071C33BD9E00D84F27 /* PairwiseComparing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PairwiseComparing.swift; path = Sources/PairwiseComparing.swift; sourceTree = SOURCE_ROOT; };
 		4D4444091C33C26F00D84F27 /* Partitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Partitioning.swift; path = Sources/Partitioning.swift; sourceTree = SOURCE_ROOT; };
+		4D44440B1C33C68500D84F27 /* Unwrapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Unwrapping.swift; path = GenerationalTests/Unwrapping.swift; sourceTree = SOURCE_ROOT; };
 		4D6F6B281C3224EF00634E22 /* Concatenate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Concatenate.swift; path = ../Sources/Concatenate.swift; sourceTree = "<group>"; };
 		4D6F6B291C3224EF00634E22 /* Cycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cycle.swift; path = ../Sources/Cycle.swift; sourceTree = "<group>"; };
 		4D6F6B2A1C3224EF00634E22 /* RepeatedValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepeatedValue.swift; path = ../Sources/RepeatedValue.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				4D6F6B3C1C32573D00634E22 /* Iterate.swift */,
 				4D4444071C33BD9E00D84F27 /* PairwiseComparing.swift */,
 				4D4444091C33C26F00D84F27 /* Partitioning.swift */,
+				4D44440B1C33C68500D84F27 /* Unwrapping.swift */,
 			);
 			path = Generational;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				4D6F6B311C32251400634E22 /* Cycle.swift in Sources */,
 				4D6F6B301C32251400634E22 /* Concatenate.swift in Sources */,
 				4D6F6B331C32251400634E22 /* FullZip.swift in Sources */,
+				4D44440D1C33C68E00D84F27 /* Unwrapping.swift in Sources */,
 				4D6F6B3B1C3255DA00634E22 /* LazyTake.swift in Sources */,
 				4D6F6B3D1C32573D00634E22 /* Iterate.swift in Sources */,
 				4D44440A1C33C26F00D84F27 /* Partitioning.swift in Sources */,

@@ -103,4 +103,8 @@ class GenerationalTests: XCTestCase {
         let result = "hello world   how are you?".characters.partition({ ($0 == " ") != ($1 == " ") })
         XCTAssertEqual(["hello", " ", "world", "   ", "how", " ", "are", " ", "you?"], Array(result).map(String.init))
     }
+    
+    func testUnwrapping() {
+        XCTAssertEqual(Array(Array<Int?>([1, 2, nil, 3, 4, 5, nil, 6]).unwrap()), Array<Int>([1, 2, 3, 4, 5, 6]))
+    }
 }
