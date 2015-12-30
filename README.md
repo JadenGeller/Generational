@@ -52,3 +52,17 @@ for x in iterate(initialValue: 1, transform: { $0 * 2 }) {
   print(x) // -> 1 -> 2 -> 4 -> 8 -> 16 -> 32 -> 64 -> 128 -> 256 -> ...
 }
 ```
+
+## Pairwise Comparing
+```swift
+for x in [1, 2, 3].pairwiseComparison() {
+  print(x) // -> .Initial(1) -> .Pair(1, 2) -> .Pair(2, 3) -> .Final(3)
+}
+```
+
+## Partitioning
+```swift
+for x in "hello world    how are you?".characters.partition({ ($0 == " ") != ($1 == " ") }).map(String.init) {
+  print(x) // -> "hello" -> " " -> "world" -> "    " -> "how" -> " " -> "are" -> " " -> "you?"
+}
+```
