@@ -86,4 +86,21 @@ class GenerationalTests: XCTestCase {
         }
         XCTAssertEqual(32, z)
     }
+    
+    func testPairwiseComparing() {
+        for (i, x) in [1, 2, 3].pairwiseComparison().enumerate() {
+            switch i {
+            case 0:  XCTAssertTrue(PairwiseComparison.Initial(1) == x)
+            case 1:  XCTAssertTrue(PairwiseComparison.Pair(1, 2) == x)
+            case 2:  XCTAssertTrue(PairwiseComparison.Pair(2, 3) == x)
+            case 3:  XCTAssertTrue(PairwiseComparison.Final(3)   == x)
+            default: XCTFail()
+            }
+        }
+    }
+    
+    func testPartitioning() {
+        let result = "hello world   how are you?".characters.partition({ ($0 == " ") != ($1 == " ") })
+        XCTAssertEqual(["hello", " ", "world", "   ", "how", " ", "are", " ", "you?"], Array(result).map(String.init))
+    }
 }
