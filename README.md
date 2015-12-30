@@ -66,3 +66,10 @@ for x in "hello world    how are you?".characters.partition({ ($0 == " ") != ($1
   print(x) // -> "hello" -> " " -> "world" -> "    " -> "how" -> " " -> "are" -> " " -> "you?"
 }
 ```
+
+## Unwrapping
+```swift
+for x in ["1.2", "4.6", "blah", "2.9"].map({ Float($0) }).unwrap() {
+    print(x) // -> 1.2 -> 4.6 -> 2.9
+}
+```
