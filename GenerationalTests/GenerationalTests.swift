@@ -120,4 +120,17 @@ class GenerationalTests: XCTestCase {
         XCTAssertEqual(nil, g.peek())
         XCTAssertEqual(nil, g.next())
     }
+    
+    func testLookahead() {
+        var g = LookaheadSequence([1, 2, 3]).generate()
+        XCTAssertEqual(3, g.lookahead(2))
+        XCTAssertEqual(2, g.lookahead(1))
+        XCTAssertEqual(1, g.next())
+        XCTAssertEqual(2, g.next())
+        XCTAssertEqual(3, g.lookahead(0))
+        XCTAssertEqual(3, g.next())
+        XCTAssertEqual(nil, g.lookahead(5))
+        XCTAssertEqual(nil, g.next())
+        XCTAssertEqual(nil, g.lookahead(0))
+    }
 }
