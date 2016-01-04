@@ -107,4 +107,17 @@ class GenerationalTests: XCTestCase {
     func testUnwrapping() {
         XCTAssertEqual(Array(Array<Int?>([1, 2, nil, 3, 4, 5, nil, 6]).unwrap()), Array<Int>([1, 2, 3, 4, 5, 6]))
     }
+    
+    func testPeeking() {
+        var g = PeekableSequence([1, 2, 3, 4]).generate()
+        XCTAssertEqual(1, g.next())
+        XCTAssertEqual(2, g.peek())
+        XCTAssertEqual(2, g.next())
+        XCTAssertEqual(3, g.peek())
+        XCTAssertEqual(3, g.peek())
+        XCTAssertEqual(3, g.next())
+        XCTAssertEqual(4, g.next())
+        XCTAssertEqual(nil, g.peek())
+        XCTAssertEqual(nil, g.next())
+    }
 }

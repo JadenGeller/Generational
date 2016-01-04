@@ -17,6 +17,7 @@
 		4D6F6B3A1C3255DA00634E22 /* LazyDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B381C3255DA00634E22 /* LazyDrop.swift */; };
 		4D6F6B3B1C3255DA00634E22 /* LazyTake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B391C3255DA00634E22 /* LazyTake.swift */; };
 		4D6F6B3D1C32573D00634E22 /* Iterate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F6B3C1C32573D00634E22 /* Iterate.swift */; };
+		4D8DAE9F1C3A28CB00B212EC /* Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8DAE9E1C3A28CB00B212EC /* Peekable.swift */; };
 		4DE27EED1C32179500BFD11A /* Generational.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE27EE21C32179500BFD11A /* Generational.framework */; };
 		4DE27EF21C32179500BFD11A /* GenerationalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE27EF11C32179500BFD11A /* GenerationalTests.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		4D6F6B381C3255DA00634E22 /* LazyDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LazyDrop.swift; path = Sources/LazyDrop.swift; sourceTree = SOURCE_ROOT; };
 		4D6F6B391C3255DA00634E22 /* LazyTake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LazyTake.swift; path = Sources/LazyTake.swift; sourceTree = SOURCE_ROOT; };
 		4D6F6B3C1C32573D00634E22 /* Iterate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Iterate.swift; path = ../Sources/Iterate.swift; sourceTree = "<group>"; };
+		4D8DAE9E1C3A28CB00B212EC /* Peekable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Peekable.swift; path = Sources/Peekable.swift; sourceTree = SOURCE_ROOT; };
 		4DE27EE21C32179500BFD11A /* Generational.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Generational.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE27EE71C32179500BFD11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE27EEC1C32179500BFD11A /* GenerationalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenerationalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 				4D4444071C33BD9E00D84F27 /* PairwiseComparing.swift */,
 				4D4444091C33C26F00D84F27 /* Partitioning.swift */,
 				4D44440B1C33C68500D84F27 /* Unwrapping.swift */,
+				4D8DAE9E1C3A28CB00B212EC /* Peekable.swift */,
 			);
 			path = Generational;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				4D44440D1C33C68E00D84F27 /* Unwrapping.swift in Sources */,
 				4D6F6B3B1C3255DA00634E22 /* LazyTake.swift in Sources */,
 				4D6F6B3D1C32573D00634E22 /* Iterate.swift in Sources */,
+				4D8DAE9F1C3A28CB00B212EC /* Peekable.swift in Sources */,
 				4D44440A1C33C26F00D84F27 /* Partitioning.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
