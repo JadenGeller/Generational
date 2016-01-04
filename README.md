@@ -73,3 +73,15 @@ for x in ["1.2", "4.6", "blah", "2.9"].map({ Float($0) }).unwrap() {
     print(x) // -> 1.2 -> 4.6 -> 2.9
 }
 ```
+
+## Peeking
+```swift
+var generator = PeekableSequence(["Dog", "Cat", "Cow", "Fish"]).generate()
+while let this = generator.next() {
+  guard let next = generator.peek() else { continue }
+  if this.characters.first == next.characters.first {
+    print("The word after \(this) starts with the same letter.")
+    // -> The word after Cat starts with the same letter.
+  }
+}
+```
