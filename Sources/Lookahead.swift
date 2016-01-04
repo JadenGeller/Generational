@@ -34,6 +34,10 @@ public struct LookaheadGenerator<Base: GeneratorType>: GeneratorType {
         return buffer[distance]
     }
     
+    public mutating func lookahead(range: Range<Int>) -> [Base.Element] {
+        return Array(range.map{ lookahead($0) }.unwrap())
+    }
+    
     public mutating func next() -> Base.Element? {
         if buffer.count == 0 { return base.next() }
         else                 { return buffer.removeFirst() }
