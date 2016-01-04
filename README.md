@@ -85,3 +85,14 @@ while let this = generator.next() {
   }
 }
 ```
+
+# Lookahead
+```swift
+var generator = LookaheadSequence([0, 1, 0, 7, 1, 1, 0, 1]).generate()
+while let value = generator.next() {
+  if value == 0 {
+    let ahead = generator.lookahead(0..<3)
+    print(ahead) // -> [1, 0, 7] -> [7, 1, 1] -> [1]
+  }
+}
+```
