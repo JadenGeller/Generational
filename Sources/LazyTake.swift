@@ -46,12 +46,20 @@ extension SequenceType {
     func takeWhile(takeCondition: Generator.Element -> Bool) -> LazyTakeSequence<Self> {
         return LazyTakeSequence(self, takeCondition: takeCondition)
     }
+    
+    func takeUntil(stopCondition: Generator.Element -> Bool) -> LazyTakeSequence<Self> {
+        return takeWhile { !stopCondition($0) }
+    }
 }
 
 
 extension SequenceType where Generator.Element: Equatable {
-    func takeUntil(element: Generator.Element) -> LazyDropSequence<Self> {
-        return LazyDropSequence(self, dropCondition: { $0 != element })
+    func takeWhile(element: Generator.Element) -> LazyTakeSequence<Self> {
+        return takeWhile { $0 == element }
+    }
+    
+    func takeUntil(element: Generator.Element) -> LazyTakeSequence<Self> {
+        return takeUntil { $0 == element }
     }
 }
 

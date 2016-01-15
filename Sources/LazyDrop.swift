@@ -46,11 +46,19 @@ extension SequenceType {
     func dropWhile(dropCondition: Generator.Element -> Bool) -> LazyDropSequence<Self> {
         return LazyDropSequence(self, dropCondition: dropCondition)
     }
+    
+    func dropUntil(stopCondition: Generator.Element -> Bool) -> LazyDropSequence<Self> {
+        return dropWhile { !stopCondition($0) }
+    }
 }
 
 extension SequenceType where Generator.Element: Equatable {
+    func dropWhile(element: Generator.Element) -> LazyDropSequence<Self> {
+        return dropWhile { $0 == element }
+    }
+    
     func dropUntil(element: Generator.Element) -> LazyDropSequence<Self> {
-        return LazyDropSequence(self, dropCondition: { $0 != element })
+        return dropUntil { $0 == element }
     }
 }
 
