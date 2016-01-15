@@ -47,3 +47,11 @@ extension SequenceType {
         return LazyTakeSequence(self, takeCondition: takeCondition)
     }
 }
+
+
+extension SequenceType where Generator.Element: Equatable {
+    func takeUntil(element: Generator.Element) -> LazyDropSequence<Self> {
+        return LazyDropSequence(self, dropCondition: { $0 != element })
+    }
+}
+
